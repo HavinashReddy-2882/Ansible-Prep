@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './style.css'; // The new style.css will be imported here
-import config from './config.js';
+//import config from './config.js';
 
 const BookManager = () => {
   const [books, setBooks] = useState([]);
@@ -17,8 +17,8 @@ const BookManager = () => {
   const [message, setMessage] = useState('');
   const [editMode, setEditMode] = useState(false);
 
-  const baseUrl = `${config.url}/bookapi`;//jenkins
-  //const baseUrl = `${import.meta.env.VITE_API_URL}/bookapi`; for docker
+  //const baseUrl = `${config.url}/bookapi`;//jenkins
+  const baseUrl = `${import.meta.env.VITE_API_URL}/bookapi`; //for docker
   //and remove the war,finalname,servelt in backend and base url in frontend and add the corresponding docker files 
 
   useEffect(() => {
